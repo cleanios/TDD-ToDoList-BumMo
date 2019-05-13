@@ -66,4 +66,42 @@ class ItemTest: XCTestCase {
         XCTAssertEqual(timestamp, item.timestamp)
         XCTAssertEqual(location, item.location ?? nil)
     }
+    
+    func testEqualItems_ShouldBeEqual() {
+        let first = TodoItem(title: "Title")
+        let second = TodoItem(title: "Title")
+        XCTAssertEqual(first, second)
+    }
+    
+    func testWhenLocationDiffers_ShouldBeNotEqual() {
+        let coordinate = CLLocationCoordinate2D(latitude: 0, longitude: 0)
+        let first = TodoItem(title: "Title", description: "Description", timestamp: 0, location: TodoLocation(name: "Home", coordinate: coordinate))
+        let second = TodoItem(title: "Title", description: "Description", timestamp: 0, location: TodoLocation(name: "Office", coordinate: coordinate))
+        XCTAssertNotEqual(first, second)
+    }
+    
+    func testWhenOneLocationIsNilAndTheOtherIsnt_ShouldBeNotEqual() {
+        let coordinate = CLLocationCoordinate2D(latitude: 0, longitude: 0)
+        let first = TodoItem(title: "Title", description: "Description", timestamp: 0, location: TodoLocation(name: "Home", coordinate: coordinate))
+        let second = TodoItem(title: "Title", description: "Description", timestamp: 0, location: nil)
+        XCTAssertNotEqual(first, second)
+    }
+    
+    func testWhenTimestampDiffers_ShouldBeNotEqual() {
+        let first = TodoItem(title: "Title", description: "Description", timestamp: 0, location: nil)
+        let second = TodoItem(title: "Title", description: "Description", timestamp: 1, location: nil)
+        XCTAssertNotEqual(first, second)
+    }
+    
+    func testWhenDescriptionDiffers_ShouldBeNotEqual() {
+        let first = TodoItem(title: "Title", description: "Description 1", timestamp: 0, location: nil)
+        let second = TodoItem(title: "Title", description: "Description 2", timestamp: 0, location: nil)
+        XCTAssertNotEqual(first, second)
+    }
+    
+    func testWhenTitleDiffers_ShouldBeNotEqual() {
+        let first = TodoItem(title: "Title 1", description: "Description", timestamp: 0, location: nil)
+        let second = TodoItem(title: "Title 2", description: "Description", timestamp: 0, location: nil)
+        XCTAssertNotEqual(first, second)
+    }
 }

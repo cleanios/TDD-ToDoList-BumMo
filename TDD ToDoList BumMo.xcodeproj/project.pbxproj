@@ -16,6 +16,9 @@
 		1667B37F2276EA2100041745 /* TodoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1667B37E2276EA2100041745 /* TodoItem.swift */; };
 		1667B3812276EDE000041745 /* TodoLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1667B3802276EDE000041745 /* TodoLocation.swift */; };
 		1667B3842276F28200041745 /* CLLocationCoordinate2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1667B3832276F28200041745 /* CLLocationCoordinate2D.swift */; };
+		16CED4AE2289084600B8A6D1 /* ItemManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CED4AD2289084600B8A6D1 /* ItemManagerTest.swift */; };
+		16CED4B1228908AA00B8A6D1 /* ItemManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CED4B0228908AA00B8A6D1 /* ItemManager.swift */; };
+		16CED4B322890E3200B8A6D1 /* LocationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CED4B222890E3200B8A6D1 /* LocationTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +45,9 @@
 		1667B37E2276EA2100041745 /* TodoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItem.swift; sourceTree = "<group>"; };
 		1667B3802276EDE000041745 /* TodoLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoLocation.swift; sourceTree = "<group>"; };
 		1667B3832276F28200041745 /* CLLocationCoordinate2D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocationCoordinate2D.swift; sourceTree = "<group>"; };
+		16CED4AD2289084600B8A6D1 /* ItemManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemManagerTest.swift; sourceTree = "<group>"; };
+		16CED4B0228908AA00B8A6D1 /* ItemManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemManager.swift; sourceTree = "<group>"; };
+		16CED4B222890E3200B8A6D1 /* LocationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +92,7 @@
 				165F93D6226D81B9003C28B4 /* Application */,
 				165F93D8226D81DC003C28B4 /* User Interface */,
 				1667B37D2276EA1500041745 /* Model */,
+				16CED4AF2289089D00B8A6D1 /* Controller */,
 				165F93DA226D81E8003C28B4 /* View Controller */,
 				1667B3822276F27500041745 /* Extension */,
 				165F93D9226D81E1003C28B4 /* Resource */,
@@ -98,6 +105,8 @@
 			children = (
 				165F93CD226D81B6003C28B4 /* Info.plist */,
 				1667B37B2276E9CE00041745 /* ItemTest.swift */,
+				16CED4B222890E3200B8A6D1 /* LocationTest.swift */,
+				16CED4AD2289084600B8A6D1 /* ItemManagerTest.swift */,
 			);
 			path = "TDD ToDoList BumMoTests";
 			sourceTree = "<group>";
@@ -151,6 +160,14 @@
 				1667B3832276F28200041745 /* CLLocationCoordinate2D.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		16CED4AF2289089D00B8A6D1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				16CED4B0228908AA00B8A6D1 /* ItemManager.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +275,7 @@
 				165F93B9226D81B6003C28B4 /* ViewController.swift in Sources */,
 				1667B3842276F28200041745 /* CLLocationCoordinate2D.swift in Sources */,
 				1667B37F2276EA2100041745 /* TodoItem.swift in Sources */,
+				16CED4B1228908AA00B8A6D1 /* ItemManager.swift in Sources */,
 				165F93B7226D81B6003C28B4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,7 +284,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16CED4AE2289084600B8A6D1 /* ItemManagerTest.swift in Sources */,
 				1667B37C2276E9CE00041745 /* ItemTest.swift in Sources */,
+				16CED4B322890E3200B8A6D1 /* LocationTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
