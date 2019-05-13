@@ -21,3 +21,22 @@ struct TodoItem {
         self.location = location
     }
 }
+
+// MARK: - Equatable
+extension TodoItem: Equatable {
+    static func ==(lhs: TodoItem, rhs: TodoItem) -> Bool {
+        if lhs.location != rhs.location {
+            return false
+        }
+        if lhs.timestamp != rhs.timestamp {
+            return false
+        }
+        if lhs.description != rhs.description {
+            return false
+        }
+        if lhs.title != rhs.title {
+            return false
+        }
+        return true
+    }
+}
